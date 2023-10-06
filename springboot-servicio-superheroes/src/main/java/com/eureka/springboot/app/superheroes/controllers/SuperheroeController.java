@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.eureka.springboot.app.superheroes.clientes.OrganizacionClienteRest;
 import com.eureka.springboot.app.superheroes.models.entity.Superheroe;
 import com.eureka.springboot.app.superheroes.models.service.ISuperheroeService;
 
@@ -18,6 +19,9 @@ public class SuperheroeController {
 
 	@Autowired
 	private ISuperheroeService superheroeService;
+	
+	@Autowired
+	private OrganizacionClienteRest clienteRest;
 	
 	@GetMapping
 	public List<Superheroe> getAllSuperheroes(){
@@ -31,6 +35,7 @@ public class SuperheroeController {
 	
 	@PostMapping
 	public Superheroe createSuperheroe(@RequestBody Superheroe superheroe) {
+		superheroe.setOrganizacion(clienteRest.getOrganizacionById(superheroe.getOrganizacion().getId()));
 		return superheroeService.createSuperheroe(superheroe);
 	}
 	
