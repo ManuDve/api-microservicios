@@ -1,6 +1,6 @@
 # Introducción
 
-Proyecto API REST con microservicios desplegados en Eureka Server con Spring Cloud Gateway y Feign Client para la semana 2 del proyecto Eureka
+Proyecto API REST con microservicios desplegados en Eureka Server, Spring Cloud Gateway con balanceo de carga y Feign Client. Semana 2 del proyecto Eureka
 
 ## Prerequisitos de instalación
 
@@ -13,16 +13,25 @@ Proyecto API REST con microservicios desplegados en Eureka Server con Spring Clo
 ## Configuración Inicial
 
 * Clonar el repositorio localmente
+```
+git clone https://github.com/ManuDve/superheroes-topsecret.git
+```
+* Importar Proyecto desde el File System incluyendo todas las carpetas
 * Cargar las dependencias con Maven
-* Levantar las intancias en el siguiente orden:
+* Levantar las intancias en el siguiente orden (Run As > Spring Boot App):
 1. springboot-servicio-eureka-server
 2. springboot-servicio-organizaciones
 3. springboot-servicio-superheroes
 4. springboot-servicio-gateway-server
 
+### Eureka Server
+
+A través de la siguiente URL se puede acceder al panel de control del Servidor Eureka para revisar las intancias levantadas
+
 ```
-git clone https://github.com/ManuDve/superheroes-topsecret.git
+http://localhost:8761
 ```
+
 ### Endpoints
 Utilizando Postman, se exponen los siguientes endpoints a través del Gateway-Sever con puerto 8090
 
