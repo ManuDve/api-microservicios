@@ -2,6 +2,7 @@ package com.eureka.springboot.app.superheroes.models.entity;
 
 import java.io.Serializable;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,6 +22,8 @@ public class Superheroe implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String alias;
+	@Column(name = "esta_activo")
+	private Boolean vigencia;
 	/**
 	 * 
 	 */
