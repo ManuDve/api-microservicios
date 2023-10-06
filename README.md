@@ -23,35 +23,23 @@ Proyecto API REST con microservicios desplegados en Eureka Server con Spring Clo
 ```
 git clone https://github.com/ManuDve/superheroes-topsecret.git
 ```
-### Base de Datos
-Para visualizar la base de datos, acceder a la consola de la BD H2 en la siguiente URL en un navegador:
-```
-http://localhost:8080/topsecret-console
-```
-Acceder con las siguientes credenciales:
-```
-Driver Class: org.h2.Driver
-JDBC URL: jdbc:h2:mem:topsecret-db
-user: sa
-password: 
-```
 ### Endpoints
-Utilizando Postman, se exponen los siguientes endpoints:
+Utilizando Postman, se exponen los siguientes endpoints a través del Gateway-Sever con puerto 8090
 
 #### GET
 ```
-http://localhost:8080/api/superheroes
+http://localhost:8090/api/superheroes
 ```
 ```
-http://localhost:8080/api/organizaciones
+http://localhost:8090/api/organizaciones
 ```
 
 Estos pueden aceptar parámetros por **ID**, por ejemplo:
 ```
-http://localhost:8080/api/organizaciones/1
+http://localhost:8090/api/organizaciones/1
 ```
 ```
-http://localhost:8080/api/superheroes/1
+http://localhost:8090/api/superheroes/1
 ```
 #### POST
 
@@ -59,7 +47,7 @@ Debe ser realizado con la siguiente estructura **JSON**:
 
 * Organizaciones
 ```
-http://localhost:8080/api/organizaciones
+http://localhost:8090/api/organizaciones
 ```
 ```json
 {
@@ -78,7 +66,7 @@ http://localhost:8080/api/organizaciones
 * Superhéroes
 
 ```
-http://localhost:8080/api/superheroes
+http://localhost:8090/api/superheroes
 ```
 
 Luego de crear una organización, los superhéroes llevan la ID de la organización a la cual pertenecen:
@@ -105,9 +93,9 @@ El parámetro con la ID de la organización es **obligatorio**.
 #### DELETE
 Debe ser realizado utilizando el número de **ID**, ejemplo:
 ```
-http://localhost:8080/api/superheroes/1
+http://localhost:8090/api/superheroes/1
 ```
 Para borrar una organización, primero deben eliminarse los superhéroes que están relacionados a aquella organización
 ```
-http://localhost:8080/api/organizaciones/1
+http://localhost:8090/api/organizaciones/1
 ```
