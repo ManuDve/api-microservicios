@@ -8,8 +8,14 @@ Proyecto API REST con microservicios desplegados en Eureka Server, Spring Cloud 
 - Instalar [JDK 11](https://jdk.java.net/java-se-ri/11-MR2)
 - Instalar [Postman](https://www.postman.com/downloads/), crear una cuenta e iniciar sesión
 - Instalar el plugin [Lombok 1.18.30](https://mvnrepository.com/artifact/org.projectlombok/lombok/1.18.30) en el IDE
+- Instalar [MySSQL 8.0.34 Community Edition con Workbench](https://dev.mysql.com/downloads/mysql/)
 
-## Configuración Inicial
+## Configuración MySQL
+
+1. Crear credenciales con user:pass = sasa:sasa
+2. Crear un nuevo esquema de nombre db_organizaciones
+
+## Configuración Inicial Spring Boot Tools
 
 - Clonar el repositorio localmente
 
