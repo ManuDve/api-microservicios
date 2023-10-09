@@ -25,6 +25,6 @@ public class Superheroe{
 	@Column(name = "esta_activo")
 	private Boolean vigencia;
 	@ManyToOne
-    @JoinColumn(name = "organizacion_id", nullable = false)
+    @JoinColumn(name = "organizacion_id")
     private Organizacion organizacion;
 }

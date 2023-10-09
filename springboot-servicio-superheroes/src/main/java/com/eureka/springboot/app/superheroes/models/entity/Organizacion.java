@@ -13,18 +13,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "organizaciones")
+@Table(name = "organizaciones_en_superheroes")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Organizacion {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nombre;
-	@Column(name="es_publico")
     private Boolean publico;
-    @Column(name="primera_aparicion")
     private LocalDate fecha;
-    
 }
