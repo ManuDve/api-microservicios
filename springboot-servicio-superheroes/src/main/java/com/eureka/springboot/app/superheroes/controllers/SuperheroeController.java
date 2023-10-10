@@ -3,6 +3,7 @@ package com.eureka.springboot.app.superheroes.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -48,8 +49,14 @@ public class SuperheroeController {
 	}
 	
 	@DeleteMapping("/{id}")
-	public void deleteSuperheroeById(@PathVariable Long id) {
+	public ResponseEntity<String> deleteSuperheroeById(@PathVariable Long id) {
+		//Elimina primero la organizacion que esta contenida dentro del superheroe
+		Long idOrganizacion = superheroeService.getSuperheroeById(id).getOrganizacion().getId();
+		String nombreDelEliminado = superheroeService.getSuperheroeById(id).getAlias();
 		superheroeService.deleteSuperheroeById(id);
+		organizacionService.deleteOrganizacionById(idOrganizacion);
+		// return ResponseEntity.ok("Se ha eliminado el supeheroe y la organizacion de ID:" + idOrganizacion);
+		return ResponseEntity.ok("Se ha eliminado el supehéroe llamado " + nombreDelEliminado);
 	}
 	
 }

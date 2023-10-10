@@ -32,6 +32,10 @@ git clone https://github.com/ManuDve/superheroes-topsecret.git
 3. springboot-servicio-superheroes
 4. springboot-servicio-gateway-server
 
+**Nota:** En caso de no funcionar correctamente los endpoints luego de levantar el servicio 2 y 3, se sugiere reiniciar el servicio del Gateway Server:
+
+![Imagen de muestra](./readme_01.jpg)
+
 ### Eureka Server
 
 A través de la siguiente URL se puede acceder al panel de control del Servidor Eureka para revisar las intancias levantadas
@@ -128,7 +132,7 @@ Debe ser realizado utilizando el número de **ID**, ejemplo:
 http://localhost:8090/api/superheroes/1
 ```
 
-Para borrar una organización, primero deben eliminarse los superhéroes que están relacionados a aquella organización
+Se sugiere borrar primero el o los superhéroes y luego la organización
 
 ```
 http://localhost:8090/api/organizaciones/1

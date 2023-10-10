@@ -18,7 +18,7 @@ public class OrganizacionServiceImpl implements OrganizacionService {
 	}
 
 	@Override
-	public void deleteOrganizacion(Long id) {
+	public void deleteOrganizacionById(Long id) {
 		organizacionDao.deleteById(id);
 	}
 
