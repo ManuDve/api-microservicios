@@ -12,7 +12,7 @@ Proyecto API REST con microservicios desplegados en Eureka Server, Spring Cloud 
 
 ## Configuración MySQL
 
-1. Crear credenciales con user:pass = sasa:sasa
+1. Crear credenciales con user:pass = root:sasa
 2. Crear un nuevo esquema de nombre db_organizaciones
 
 ## Configuración Inicial Spring Boot Tools
