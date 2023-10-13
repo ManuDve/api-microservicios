@@ -13,7 +13,7 @@ Proyecto API REST con microservicios desplegados en Eureka Server, Spring Cloud 
 ## Configuración MySQL
 
 1. Crear credenciales con user:pass = root:sasa
-2. (opcional) Crear un nuevo esquema de nombre db_organizaciones, este se creará automáticamente en caso contrario.
+2. (opcional) Crear un nuevo esquema de nombre "db_organizaciones", este se creará automáticamente en caso contrario.
 
 ## Configuración Inicial Spring Boot Tools
 
@@ -32,7 +32,7 @@ git clone https://github.com/ManuDve/superheroes-topsecret.git
 3. springboot-servicio-superheroes
 4. springboot-servicio-gateway-server
 
-**Nota:** En caso de no funcionar correctamente los endpoints luego de levantar el servicio 2 y 3, se sugiere esperar al menos _1 minuto_ o reiniciar el servicio del Gateway Server:
+**Nota:** En caso de no funcionar correctamente los endpoints luego de levantar los servicios, se sugiere esperar al menos _1 minuto_ o reiniciar el servicio del Gateway Server:
 
 ![Imagen de muestra](./readme_01.jpg)
 
