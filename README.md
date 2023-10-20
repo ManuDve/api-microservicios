@@ -44,6 +44,21 @@ A través de la siguiente URL se puede acceder al panel de control del Servidor 
 http://localhost:8761
 ```
 
+### Consola H2 Servicio Superheroes
+
+Luego de levantar el Gateway Server, se puede acceder a la consola de la base de datos a través de la siguiente URL
+```
+http://localhost:8090/api/superheroes/h2-console
+```
+
+Las credenciales son:
+```
+Driver Class: org.h2.Driver
+JDBC URL: jdbc:h2:mem:topsecret-db
+user: sa
+password: 
+```
+
 ### Endpoints
 
 Utilizando Postman, se exponen los siguientes endpoints a través del Gateway-Sever con puerto 8090
