@@ -22,7 +22,6 @@ public class OrganizacionController {
 	private IOrganizacionService organizacionService;
 	
 	@GetMapping
-	@CrossOrigin
 	public List<Organizacion> getAllOrganizaciones() {
 		return organizacionService.getAllOrganizaciones();
 	}
